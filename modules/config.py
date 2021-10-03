@@ -2,35 +2,7 @@ import json
 
 
 class Config(object):
-
-    # def get_config_data(self):
-    #     try:
-    #         with open('config.json', 'r') as f:
-    #             json.load(f)
-    #     except FileNotFoundError:
-    #         with open('config.json', 'w') as f:
-    #             data = {
-    #                 "api_id": "",
-    #                 "api_hash": "",
-    #                 "banned_keywords": [],
-    #                 "ids_origin": [],
-    #                 "link_destinations": []
-    #             }
-    #             json.dump(data, f)
-    #
-    # def define_config_data(self, api_id: int, api_hash: str, banned_keywords: list,
-    #                        ids_origin: list, link_destinations: list):
-    #     with open('config.json', 'w') as f:
-    #         data = {
-    #             "api_id": int(api_id),
-    #             "api_hash": str(api_hash),
-    #             "banned_keywords": banned_keywords,
-    #             "ids_origin": ids_origin,
-    #             "link_destinations": link_destinations
-    #         }
-    #         json.dump(data, f)
-    #     self.get_config_data()
-
+    
     @staticmethod
     def create_json_config():
         with open('config.json', 'w') as f:
