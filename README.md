@@ -30,6 +30,6 @@ Python program that forward received messages from Telegram conversations.
   1. At first use, Telethon package will need your number and will set a code to your telegram, just input it.
   2. If error, try to delete config.json folder and open the program again.
 
-## Final Notes
+# Final Notes
 Im not a professional at Python, so, sorry for any incosistence at code and errors that can happen.
 I am not responsible for any misuse of the program.
