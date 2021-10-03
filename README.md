@@ -2,7 +2,7 @@
 Python program that forward received messages from Telegram conversations.
 
 ## What this program can do
-  1. Receive any kind of messages from defined groups or channels
+  1. Receive any kind of messages from defined groups or channels.
   2. Automatic forward received messages to defined groups or channels.
   3. Multiple groups and channels supported.
   4. Ignore messages with customs banned keywords.
