@@ -40,7 +40,7 @@ class PyAutoForward(TelegramClient):
 
         return return_list
 
-    def start_forwarding(self, data: dict):
+    def start_forwarding(self, data: dict, error_log: bool = True):
         # Bot main method to listen and forward messages
         print('\n--------------------- Bot Started ---------------------\n\n')
 
@@ -59,8 +59,13 @@ class PyAutoForward(TelegramClient):
                                 print(f'[{datetime.now()}] Forwarded message from id '
                                       f'{int(event.message.peer_id.channel_id)} to {group}')
                         except Exception as err:
-                            print('Error occurred: ' + str(err))
-            except AttributeError:
-                pass
+                            if error_log:
+                                print(f'[{datetime.now()}] Error ignored: {str(err)}')
+                    elif banned_key:
+                        print(f'[{datetime.now()}] Ignoring message with banned word '
+                              f'from ID {event.message.peer_id.channel_id}')
+            except AttributeError as error:
+                if error_log:
+                    print(f'[{datetime.now()}] Error ignored: {str(error)}')
 
         self.run_until_disconnected()
