@@ -15,7 +15,8 @@ Python program that forward received messages from Telegram conversations.
 
 ## For making changes and running it direct by code
   1. Python installed (https://www.python.org/).
-  2. Telethon module installed (pip install Telethon).
+  2. Telethon module installed (pip install telethon).
+  3. Rich module installed (pip install rich)
 
 ## Executable
   1. New folder and executable program (download it at release tab).
@@ -31,5 +32,5 @@ Python program that forward received messages from Telegram conversations.
   2. If error, try to delete config.json folder and open the program again.
 
 # Final Notes
-Im not a professional at Python, so, sorry for any incosistence at code and errors that can happen.
+I'm not a professional at Python, so, sorry for any inconsistencies at code and errors that can happen.
 I am not responsible for any misuse of the program.

@@ -1,6 +1,7 @@
 from modules.pyautofward import PyAutoForward
 from modules.config import Config
-from pprint import pprint
+from rich import print
+from rich.prompt import Prompt
 import os
 
 
@@ -10,9 +11,9 @@ def main():
 
 def start_bot():
     # User confirmation to start the bot
+    prompt = Prompt()
+    continue_var = prompt.ask('Start?', choices=['Y', 'N'])
 
-    while (continue_var := input('Start bot? y or n: ').upper()) not in ['Y', 'N']:
-        pass
     if continue_var == 'Y':
         return True
     else:
@@ -35,7 +36,7 @@ def verify_config():
 
         print("To change the settings, edit the 'config.json' file in the same path of the program\n"
               "This is your actual config:\n")
-        pprint(data)
+        print(data)
         print('')
 
         client = PyAutoForward(
